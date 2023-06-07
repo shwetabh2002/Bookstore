@@ -6,7 +6,7 @@ const bodyParser = require('body-parser');
 const app = express();
 
 
-mongoose.connect('mongodb+srv://shwetabh183:123456admin@shwetabhapi.1i7iowa.mongodb.net/Node-API?retryWrites=true&w=majority', {
+mongoose.connect('connection string', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 })
