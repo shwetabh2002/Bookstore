@@ -1,0 +1,20 @@
+<h1>Book Reviews</h1>
+<form action="/books/search" method="GET">
+  <input type="text" name="query" placeholder="Search by title">
+  <select name="author">
+    <option value="">All Authors</option>
+    <option value="Author 1">Author 1</option>
+    <option value="Author 2">Author 2</option>
+    <!-- Add more authors as needed -->
+  </select>
+  <button type="submit">Search</button>
+</form>
+<ul>
+  <% books.forEach(function(book) { %>
+    <li>
+      <h2><%= book.title %></h2>
+      <p><%= book.author %></p>
+      <p><%= book.review.slice(0, 50) + '...' %></p>
+    </li>
+  <% }) %>
+</ul>

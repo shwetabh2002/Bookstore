@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Book List</title>
+  </head>
+  <body>
+    <h1>Book List</h1>
+    <% if (books.length === 0) { %>
+      <p>No books found.</p>
+    <% } else { %>
+      <ul>
+        <% books.forEach((book) => { %>
+          <li>
+            <h2><%= book.title %></h2>
+            <p>Author: <%= book.author %></p>
+            <p>Rating: <%= book.rating %></p>
+            <p>Review: <%= book.review %></p>
+          </li>
+        <% }) %>
+      </ul>
+    <% } %>
+  </body>
+</html>
